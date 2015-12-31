@@ -1,6 +1,6 @@
 # hastebin
 
-CLI tool that uploads text to hastebin.
+CLI tool that uploads text to hastebin. (Basically a Node.js version of [haste-client](https://github.com/seejohnrun/haste-client))
 
 ## Installation
 
@@ -31,6 +31,14 @@ Options:
 ```sh
 $ echo "hi" | hastebin
 http://hastebin.com/ilitixevat
+```
+
+## Custom server
+
+By default, hastebin will point to `http://hastebin.com`. You can set the `HASTE_SERVER` environment variable to configure this.
+
+```sh
+alias work_haste="HASTE_SERVER=http://something.com haste"
 ```
 
 ## Building
