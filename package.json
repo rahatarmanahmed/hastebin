@@ -1,0 +1,30 @@
+{
+  "name": "hastebin",
+  "main": "bin/index.js",
+  "version": "0.0.0",
+  "description": "CLI tool that uploads text to hastebin",
+  "author": "Rahat Ahmed",
+  "preferGlobal": "true",
+  "bin": {
+    "hastebin": "./bin/index.js"
+  },
+  "dependencies": {
+    "got": "^5.3.0",
+    "yargs": "1.3.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.3.17",
+    "babel-eslint": "^4.1.6",
+    "babel-preset-es2015": "^6.3.13",
+    "eslint": "^1.10.3",
+    "eslint-config-kellyirc": "^3.1.0",
+    "rimraf": "*"
+  },
+  "scripts": {
+    "lint": "eslint src/",
+    "clean": "rimraf lib",
+    "prepublish": "npm run build",
+    "prebuild": "npm run clean",
+    "build": "babel src -d lib"
+  }
+}
