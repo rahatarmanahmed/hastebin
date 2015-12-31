@@ -22,6 +22,7 @@
   },
   "scripts": {
     "lint": "eslint src/",
+    "test": "npm run lint",
     "clean": "rimraf lib",
     "prepublish": "npm run build",
     "prebuild": "npm run clean",
