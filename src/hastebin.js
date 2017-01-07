@@ -12,7 +12,7 @@ var argv = require('yargs')
     .alias('h', 'help')
     .argv
 
-var hasteServer = process.env.HASTE_SERVER || 'http://hastebin.com'
+var hasteServer = process.env.HASTE_SERVER || 'https://hastebin.com'
 
 got.post(url.resolve(hasteServer, 'documents'), {
   body: argv._[0] ? fs.createReadStream(argv._[0]) : process.stdin,
