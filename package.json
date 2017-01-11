@@ -1,7 +1,7 @@
 {
   "name": "hastebin",
   "main": "bin/index.js",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "CLI tool that uploads text to hastebin",
   "author": "Rahat Ahmed",
   "preferGlobal": "true",
