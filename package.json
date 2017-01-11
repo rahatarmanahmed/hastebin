@@ -18,7 +18,7 @@
   },
   "scripts": {
     "lint": "standard",
-    "test": "npm run lint && echo 'test' | node src/hastebin.js | node test/test.js",
+    "test": "npm run lint && echo 'test' | node bin/index.js | node test/test.js",
     "prepublish": "npm test"
   },
   "engines": {
