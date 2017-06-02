@@ -1,5 +1,7 @@
 # hastebin
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/rahatarmanahmed/hastebin.svg)](https://greenkeeper.io/)
+
 CLI tool that uploads text to hastebin. (Basically a Node.js version of [haste-client](https://github.com/seejohnrun/haste-client))
 
 ## Installation
