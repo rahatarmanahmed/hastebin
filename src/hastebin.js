@@ -1,7 +1,8 @@
 var got = require('got')
 var url = require('url')
 
-function createPaste (content, options, gotOptions = {}) {
+function createPaste (content, options, gotOptions) {
+  gotOptions = gotOptions || {}
   if (typeof content !== 'string') {
     return Promise.reject(new Error('You cannot send that. Please include a "content" argument that is a valid string.'))
   }
