@@ -1,25 +1,44 @@
 {
   "name": "hastebin",
-  "main": "bin/index.js",
+  "main": "src/hastebin.js",
   "version": "0.0.3",
   "description": "CLI tool that uploads text to hastebin",
   "author": "Rahat Ahmed",
-  "preferGlobal": "true",
+  "typings": "./index.d.ts",
+  "readme": "https://github.com/rahatarmanahmed/hastebin#readme",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rahatarmanahmed/hastebin/"
+  },
+  "bugs": {
+    "url": "https://github.com/rahatarmanahmed/hastebin/issues"
+  },
+  "homepage": "https://github.com/rahatarmanahmed/hastebin/",
+  "contributors": [
+    {
+      "name": "Will Hoskings (resynth1943)",
+      "email": "resynth1943@outlook.com",
+      "url": "https://resynth1943.github.io"
+    }
+  ],
   "bin": {
-    "hastebin": "./bin/index.js"
+    "hastebin": "./src/cli.js"
   },
   "dependencies": {
     "got": "^5.3.0",
     "yargs": "1.3.2"
   },
   "devDependencies": {
+    "@types/got": "^9.6.7",
     "get-stdin": "^5.0.1",
     "standard": "^8.6.0"
   },
   "scripts": {
     "lint": "standard",
-    "test": "npm run lint && echo 'test' | node bin/index.js | node test/test.js",
-    "prepublish": "npm test"
+    "test": "npm run lint && echo 'test' | node src/cli.js | node test/test.js",
+    "prepublish": "npm test",
+    "fix": "standard --fix"
   },
   "engines": {
     "node": ">=4"
