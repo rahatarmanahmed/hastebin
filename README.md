@@ -44,7 +44,7 @@ http://hastebin.com/ilitixevat
 ```js
 var hastebin = require('hastebin')
 
-hastebin.createPaste('url', {
+hastebin.createPaste('content for your paste', {
   raw: true,
   contentType: 'text/plain',
   server: 'https://hastebin.com'
