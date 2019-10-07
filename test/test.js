@@ -5,7 +5,7 @@ var jsapi = require('../src/hastebin')
 
 var testData = 'test'
 
-function testOutput (input) {
+function assertHastebinUrlMatchesTestData (input) {
   var hastebinUrl = input.trim()
   assert(hastebinUrl.match(/^https:\/\/hastebin.com\/.*/) != null, 'output must be a hastebin url')
   var key = hastebinUrl.split('/').slice(-1)[0]
@@ -17,11 +17,11 @@ function testOutput (input) {
 }
 
 console.log('testing stdin...')
-getStdin().then(testOutput).then(function () {
+getStdin().then(assertHastebinUrlMatchesTestData).then(function () {
   console.log('testing jsapi non-raw...')
-  jsapi.createPaste(testData).then(testOutput)
+  jsapi.createPaste(testData).then(assertHastebinUrlMatchesTestData)
   .then(function () {
     console.log('testing jsapi raw...')
-    jsapi.createPaste(testData, { raw: true }).then(testOutput)
+    jsapi.createPaste(testData, { raw: true }).then(assertHastebinUrlMatchesTestData)
   })
 })
