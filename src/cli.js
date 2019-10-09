@@ -20,4 +20,3 @@ getStream(argv._[0] ? fs.createReadStream(argv._[0]) : process.stdin).then(funct
       console.log(url)
     })
 })
-
