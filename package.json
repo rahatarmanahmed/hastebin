@@ -33,7 +33,7 @@
   "devDependencies": {
     "@types/got": "^9.6.7",
     "get-stdin": "^5.0.1",
-    "standard": "^10.0.3"
+    "standard": "^11.0.1"
   },
   "scripts": {
     "lint": "standard",
