@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 var fs = require('fs')
 var hastebin = require('./hastebin')
 var getStream = require('get-stream')
