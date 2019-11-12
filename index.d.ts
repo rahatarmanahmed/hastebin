@@ -13,6 +13,6 @@ declare module "hastebin" {
     }
 
     /** Uploads text to Hastebin (or your selected server). Returns a Promise containing the URL to the paste. */
-    export function createPaste (content: string, options?: Options, gotOptions?: GotOptions): Promise<string>;
+    export function createPaste (content: string, options?: Options, gotOptions?: GotOptions<string>): Promise<string>;
 }
 
